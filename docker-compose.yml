@@ -1,0 +1,15 @@
+version: '2'
+services:
+    collabim-phpstorm:
+        container_name: collabim-phpstorm
+        build: ./
+        image: collabim-phpstorm
+        volumes:
+            - collabim-phpstorm:/root/.PhpStorm2016.3
+            - /etc/localtime:/etc/localtime:ro
+            - /tmp/.X11-unix
+        ports:
+            - "22230:22"
+
+volumes:
+    collabim-phpstorm:
