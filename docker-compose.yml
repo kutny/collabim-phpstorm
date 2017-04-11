@@ -5,7 +5,7 @@ services:
         build: ./
         image: collabim-phpstorm
         volumes:
-            - collabim-phpstorm:/root/.PhpStorm2016.3
+            - collabim-phpstorm:/root/.PhpStorm2017.1
             - /etc/localtime:/etc/localtime:ro
             - /tmp/.X11-unix
         ports:

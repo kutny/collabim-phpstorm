@@ -8,10 +8,10 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
 RUN mkdir /root/projects \
-    && mkdir /root/.PhpStorm2016.3 \
-    && touch /root/.PhpStorm2016.3/.keep
+    && mkdir /root/.PhpStorm2017.1 \
+    && touch /root/.PhpStorm2017.1/.keep
 
-RUN mkdir /opt/phpstorm && wget -O - https://download.jetbrains.com/webide/PhpStorm-2016.3.2.tar.gz | tar xzf - --strip-components=1 -C "/opt/phpstorm"
+RUN mkdir /opt/phpstorm && wget -O - https://download.jetbrains.com/webide/PhpStorm-2017.1.tar.gz | tar xzf - --strip-components=1 -C "/opt/phpstorm"
 
 COPY keys/id_rsa.pub /root/.ssh/authorized_keys
 
